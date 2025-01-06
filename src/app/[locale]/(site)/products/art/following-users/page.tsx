@@ -207,6 +207,8 @@ export default function FollowingUsers() {
               </h2>
               <div className="mb-10 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
                 {mockFollowingUsersData.map(art => (
+                  // eslint-disable-next-line ts/ban-ts-comment
+                  // @ts-ignore
                   <ArtCard key={art.id} art={art} />
                 ))}
               </div>
