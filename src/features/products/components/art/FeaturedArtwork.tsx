@@ -1,0 +1,162 @@
+'use client'
+
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+import { ArrowRight, Heart, MessageCircleMore, RefreshCw, UserPlus } from 'lucide-react'
+import Image from 'next/image'
+import { Autoplay, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+import UserRoleIcon from '@/components/icons/UserRoleIcon'
+import { StarRating } from '@/components/shared/StarRating'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { formatNumber } from '@/utils/formatter'
+
+export default function FeaturedArtwork() {
+  return (
+    <section className="space-y-10">
+      <h2 className="text-2xl font-bold">
+        ผลงานที่ได้รับความสนใจ
+      </h2>
+      <div className="grid grid-cols-12 gap-4">
+        <div className="col-span-9 grid h-[304px] grid-cols-subgrid gap-4 rounded-[40px] bg-white/70 p-4 text-black">
+          <div className="relative col-span-2">
+            <div className="absolute">
+              <div className="mb-1 h-[60px] w-full transition-[height] hover:h-[280px]">
+                <Image src="/art/1.jpg" className="h-full rounded-[40px] object-cover" width={251} height={280} alt="" />
+              </div>
+              <div className="mb-1 h-[60px] w-full transition-[height] hover:h-[280px]">
+                <Image src="/art/1.jpg" className="h-full rounded-[40px] object-cover" width={251} height={280} alt="" />
+              </div>
+              <div className="h-[60px] w-full transition-[height] hover:h-[280px]">
+                <Image src="/art/1.jpg" className="h-full rounded-[40px] object-cover" width={251} height={280} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="col-span-7 flex h-full flex-col">
+            <h3 className="mb-[18px] text-2xl font-bold">พระพิฆเนศไอยเรศ</h3>
+            <h4 className="mb-1 font-bold">
+              รายละเอียด
+            </h4>
+            <div className="mb-[18px] flex-1">
+              <p className="line-clamp-3">
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
+              </p>
+            </div>
+            <div className="mb-4 text-end">
+              <Button variant="outline-secondary" size="xs" className="rounded-full text-xs">
+                รายละเอียดเพิ่มเติม
+              </Button>
+            </div>
+            <div className="flex justify-between">
+              <div className="flex gap-2">
+                <Button variant="lightest" size="iconLg" className="rounded-full">
+                  <Heart size={32} className="text-primary" />
+                </Button>
+                <Button variant="lightest" size="iconLg" className="rounded-full">
+                  <MessageCircleMore size={32} className="text-primary" />
+                </Button>
+              </div>
+              <div className="flex gap-4">
+                <Badge className="h-12 gap-2 rounded-full px-[27.5px] text-2xl font-bold">
+                  {formatNumber(12000)}
+                  {' '}
+                  บาท
+                </Badge>
+                <Button
+                  size="iconLg"
+                  className="rounded-full border-2 border-primary bg-primary-50 text-primary hover:bg-primary hover:text-white"
+                >
+                  <ArrowRight className="size-7" strokeWidth={4} />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Swiper
+          pagination={{
+            el: '.popular-products-pagination',
+            clickable: true,
+          }}
+          autoplay
+          modules={[Autoplay, Pagination]}
+          spaceBetween={16}
+          className="col-span-3 row-span-2 w-full rounded-[40px]"
+        >
+          {['/art/1.jpg', '/art/2.jpg', '/art/3.jpg', '/art/4.jpg', '/art/5.jpg'].map((image, index) => (
+            <SwiperSlide className="relative" key={image + index}>
+              <Image width={408} height={432} alt="" src={image} className="size-full rounded-[40px] object-cover" />
+            </SwiperSlide>
+          ))}
+          <div className="popular-products-pagination absolute z-10 text-center" />
+        </Swiper>
+        <div className="col-span-7 col-start-3 flex justify-between">
+          <div className="space-y-4">
+            <div className="space-x-2">
+              {['hashtag 1', 'hashtag 2', 'hashtag 3'].map(hashtag => (
+                <Badge key={hashtag} variant="outlineWhite" className="h-9 rounded-full">
+                  {hashtag}
+                </Badge>
+              ))}
+            </div>
+            <div className="col-span-2 flex items-center gap-4">
+              <div>
+                <Image
+                  className="rounded-full"
+                  alt=""
+                  width={60}
+                  height={60}
+                  src="https://placehold.jp/60x60.png"
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-2">
+                  <h2 className="font-bold">สมชายk</h2>
+                  <UserRoleIcon userRoleId={2} />
+                  <span>4.0</span>
+                  <StarRating rating={4} />
+                </div>
+                <div className="flex items-center gap-2">
+                  <Button className="w-[125px] px-1" size="xss" variant="outline-white">
+                    <span className="flex-1">ติดตาม</span>
+                    <UserPlus size={20} />
+                  </Button>
+                  <Button className="w-[125px] px-1" size="xss" variant="outline-white">
+                    <span className="flex-1">ส่งข้อความ</span>
+                    <MessageCircleMore size={20} />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Button className="aspect-square h-full rounded-full" variant="outline-white">
+            <RefreshCw size={60} />
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
+}
