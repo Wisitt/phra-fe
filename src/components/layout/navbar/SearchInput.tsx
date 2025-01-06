@@ -11,6 +11,7 @@ import { useRouter } from '@/i18n/routing'
 import FilterPopover from './FilterPopover'
 
 interface SearchInputProps {
+  onChange?: (value: string) => void
   pathname?: string
 }
 

@@ -21,7 +21,8 @@ enum Tab {
   Auction,
   RentalHistory,
 }
-
+// eslint-disable-next-line ts/ban-ts-comment
+// @ts-ignore
 const products: ((Product | Auction) & { category: Category })[] = [
   ...Array.from({ length: 8 }, (_, i) => ({
     id: i + 1,

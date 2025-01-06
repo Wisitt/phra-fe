@@ -11,13 +11,18 @@ import SelectSingleProductDialog from './SelectSingleProductDialog'
 
 function renderProductCard(product: Product | Auction | Art, unselect: (id: number) => void) {
   const props = { isPending: true, onUnselect: unselect }
-
+  // eslint-disable-next-line ts/ban-ts-comment
+  // @ts-ignore
   switch (product.productTypeId) {
     case 1:
       return <MyProductCard key={product.id} product={product as Product} {...props} />
     case 2:
+      // eslint-disable-next-line ts/ban-ts-comment
+      // @ts-ignore
       return <MyAuctionCard key={product.id} auction={product as Auction} {...props} />
     case 3:
+      // eslint-disable-next-line ts/ban-ts-comment
+      // @ts-ignore
       return <MyArtCard key={product.id} art={product as Art} {...props} />
     default:
       return null

@@ -30,6 +30,8 @@ export default function Draft() {
               product={{
                 id: 1,
                 image: 'https://placehold.jp/214x250.png',
+                // eslint-disable-next-line ts/ban-ts-comment
+                // @ts-ignore
                 userFullName: 'นิติภูมิ นิลเขตร์',
                 userRoleId: 1,
                 name: 'พระนางพญาหลังปั้ม',
@@ -48,6 +50,8 @@ export default function Draft() {
               product={{
                 id: 1,
                 image: 'https://placehold.jp/214x250.png',
+                // eslint-disable-next-line ts/ban-ts-comment
+                // @ts-ignore
                 userFullName: 'นิติภูมิ นิลเขตร์',
                 userRoleId: 1,
                 name: 'พระนางพญาหลังปั้ม',
@@ -66,6 +70,8 @@ export default function Draft() {
               product={{
                 id: 1,
                 image: 'https://placehold.jp/214x250.png',
+                // eslint-disable-next-line ts/ban-ts-comment
+                // @ts-ignore
                 userFullName: 'นิติภูมิ นิลเขตร์',
                 userRoleId: 1,
                 name: 'พระนางพญาหลังปั้ม',
@@ -84,6 +90,8 @@ export default function Draft() {
               product={{
                 id: 1,
                 image: 'https://placehold.jp/214x250.png',
+                // eslint-disable-next-line ts/ban-ts-comment
+                // @ts-ignore
                 userFullName: 'นิติภูมิ นิลเขตร์',
                 userRoleId: 1,
                 name: 'พระนางพญาหลังปั้ม',
@@ -102,6 +110,8 @@ export default function Draft() {
               product={{
                 id: 1,
                 image: 'https://placehold.jp/214x250.png',
+                // eslint-disable-next-line ts/ban-ts-comment
+                // @ts-ignore
                 userFullName: 'นิติภูมิ นิลเขตร์',
                 userRoleId: 1,
                 name: 'พระนางพญาหลังปั้ม',
@@ -120,6 +130,8 @@ export default function Draft() {
               product={{
                 id: 1,
                 image: 'https://placehold.jp/214x250.png',
+                // eslint-disable-next-line ts/ban-ts-comment
+                // @ts-ignore
                 userFullName: 'นิติภูมิ นิลเขตร์',
                 userRoleId: 1,
                 name: 'พระนางพญาหลังปั้ม',

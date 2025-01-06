@@ -96,6 +96,7 @@ function generateMockAuctions(count: number): Auction[] {
     bidderCount: Math.floor(Math.random() * 13),
     minShortCutPrice: i % 2 === 0 ? 200 : null,
     bidderUserId: Math.floor(Math.random() * 3),
+    productTypeId: Math.floor(Math.random() * 10) + 1,
   }))
 }
 

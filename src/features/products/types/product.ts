@@ -11,6 +11,7 @@ export interface Product {
   name: string
   price: number
   productTypeId: number
+  
 }
 
 export interface ProductType {

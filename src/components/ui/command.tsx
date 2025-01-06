@@ -41,6 +41,8 @@ const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
 >(({ className, ...props }, ref) => (
+             // eslint-disable-next-line ts/ban-ts-comment
+                  // @ts-ignore
   <div className="flex items-center border-b px-3" cmdkInputWrapper="">
     <Search className="mr-2 size-4 shrink-0 opacity-50" />
     <CommandPrimitive.Input

@@ -1,6 +1,5 @@
 'use client'
 
-import type { Auction } from '@features/products/types/auction'
 import {
   Hourglass,
   Trash,
@@ -19,6 +18,7 @@ import { Link } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
 import { formatNumber } from '@/utils/formatter'
 
+import type { Auction } from '../../types/auction'
 import AuctionStatusBadge from './AuctionStatusBadge'
 
 interface MyAuctionCardProps {

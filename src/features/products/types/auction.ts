@@ -23,6 +23,8 @@ export interface Auction {
   bidderCount: number
   minShortCutPrice: number | null
   bidderUserId: number | null
+  productTypeId: number
+
 }
 
 export interface AuctionProductType {
